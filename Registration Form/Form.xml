@@ -207,3 +207,27 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/tvInterest"
         app:layout_constraintTop_toBottomOf="@+id/spinner" />
+    <CheckBox
+        android:id="@+id/FED"
+        android:layout_width="270dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="10dp"
+        android:text="Front End Development"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tvInterest"
+        app:layout_constraintTop_toBottomOf="@+id/GraphicDesign" />
+
+    <CheckBox
+        android:id="@+id/BED"
+        android:layout_width="270dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="10dp"
+        android:text="Back End Development"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tvInterest"
+        app:layout_constraintTop_toBottomOf="@+id/FED" />
