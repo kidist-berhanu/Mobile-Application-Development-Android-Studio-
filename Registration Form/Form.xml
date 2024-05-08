@@ -184,3 +184,26 @@
         android:entries="@array/spinner_values"
         app:layout_constraintStart_toEndOf="@+id/tvLevel"
         app:layout_constraintTop_toBottomOf="@+id/radioGrp" />
+   <TextView
+        android:id="@+id/tvInterest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="@string/interest"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvLevel" />
+
+    <CheckBox
+        android:id="@+id/GraphicDesign"
+        android:layout_width="270dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="24dp"
+        android:text="Graphic Design"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tvInterest"
+        app:layout_constraintTop_toBottomOf="@+id/spinner" />
