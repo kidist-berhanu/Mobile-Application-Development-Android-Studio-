@@ -165,3 +165,22 @@
             android:textColor="@color/black"
             android:textSize="14sp" />
     </RadioGroup>
+   <TextView
+        android:id="@+id/tvLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="@string/level"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvGender" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="218dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="30dp"
+        android:entries="@array/spinner_values"
+        app:layout_constraintStart_toEndOf="@+id/tvLevel"
+        app:layout_constraintTop_toBottomOf="@+id/radioGrp" />
