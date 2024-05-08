@@ -139,3 +139,29 @@
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvDOB" />
+   <RadioGroup
+        android:id="@+id/radioGrp"
+        android:layout_width="210dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="14dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintStart_toEndOf="@+id/tvGender"
+        app:layout_constraintTop_toBottomOf="@+id/datePickerButton">
+
+        <RadioButton
+            android:id="@+id/femaleRbtn"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/female"
+            android:textColor="@color/black" />
+
+        <RadioButton
+            android:id="@+id/maleRbtn"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/male"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+    </RadioGroup>
