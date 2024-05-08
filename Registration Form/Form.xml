@@ -231,3 +231,26 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/tvInterest"
         app:layout_constraintTop_toBottomOf="@+id/FED" />
+  <CheckBox
+        android:id="@+id/AI"
+        android:layout_width="270dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="10dp"
+        android:text="AI"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tvInterest"
+        app:layout_constraintTop_toBottomOf="@+id/BED" />
+
+    <Button
+        android:id="@+id/registerBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/registerBtn"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.445"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AI" />
