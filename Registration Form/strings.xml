@@ -1,2 +1,15 @@
 <resources>
+  <string name="app_name">Registration Form</string>
+    <string name="title">Internship Program Applicants Form</string>
+    <string name="uploadBtn">Upload Image</string>
+    <string name="fname">Full Name</string>
+    <string name="email">Email</string>
+    <string name="phone">Phone</string>
+    <string name="dob">DOB</string>
+    <string name="gender">Gender</string>
+    <string name="female">Female</string>
+    <string name="male">Male</string>
+    <string name="level">Education Level</string>
+    <string name="interest">Area of interest</string>
+    <string name="registerBtn">Register</string>
 </resources>
