@@ -12,11 +12,17 @@
     <string name="level">Education Level</string>
     <string name="interest">Area of interest</string>
     <string name="registerBtn">Register</string>
-  <string-array name="spinner_values">
+    <string-array name="spinner_values">
         <item>High School</item>
         <item>Undergraduate</item>
         <item>BA/Bsc degree</item>
         <item>MA/Msc degree</item>
         <item>PHD</item>
+    </string-array>
+    <string-array name="company_list">
+        <item>Company 1</item>
+        <item>Company 2</item>
+        <item>Company 3</item>
+        <item>Company 4</item>
     </string-array>
 </resources>
