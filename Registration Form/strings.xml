@@ -12,4 +12,11 @@
     <string name="level">Education Level</string>
     <string name="interest">Area of interest</string>
     <string name="registerBtn">Register</string>
+  <string-array name="spinner_values">
+        <item>High School</item>
+        <item>Undergraduate</item>
+        <item>BA/Bsc degree</item>
+        <item>MA/Msc degree</item>
+        <item>PHD</item>
+    </string-array>
 </resources>
