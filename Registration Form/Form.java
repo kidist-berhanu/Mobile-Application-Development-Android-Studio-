@@ -37,3 +37,21 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+public void openDatePicker(){
+        DatePickerDialog datePickerDialog = new DatePickerDialog(
+                MainActivity.this,   // Assuming 'this' refers to the activity context
+                R.style.DialogTheme,  // Ensure DialogTheme is defined correctly
+                new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker datePicker, int year, int month, int day) {
+                        // Showing the picked value in the textView
+                        button.setText(String.valueOf(year) + "." + String.valueOf(month) + "." + String.valueOf(day));
+                    }
+                },
+                2023,   // Initial year
+                Calendar.JANUARY,  // Initial month (note: Calendar.JANUARY = 0)
+                20      // Initial day
+        );
+
+        datePickerDialog.show();
+    }
