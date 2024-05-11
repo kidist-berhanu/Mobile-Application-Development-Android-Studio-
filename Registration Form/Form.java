@@ -19,3 +19,21 @@ import androidx.core.view.WindowInsetsCompat;
 
 import java.util.Calendar;
 
+public class MainActivity extends AppCompatActivity {
+    public Button button;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+       // EdgeToEdge.enable(this);
+        setContentView(R.layout.activity_main);
+
+        button = findViewById(R.id.datePickerButton);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                openDatePicker(); // Open date picker dialog
+            }
+        });
+
+    }
