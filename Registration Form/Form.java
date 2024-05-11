@@ -55,3 +55,17 @@ public void openDatePicker(){
 
         datePickerDialog.show();
     }
+   @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+       getMenuInflater().inflate(R.menu.option_menu,menu);
+        return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if(item.getItemId()==R.id.exit){
+            Toast.makeText(MainActivity.this, item.getTitle(), Toast.LENGTH_LONG).show();
+        }
+        return true;
+    }
+
+}
