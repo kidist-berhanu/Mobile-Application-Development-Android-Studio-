@@ -5,10 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+
+<androidx.constraintlayout.widget.ConstraintLayout
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -43,7 +41,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/header"
         tools:srcCompat="@tools:sample/avatars" />
-<Button
+
+    <Button
         android:id="@+id/uploadbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -61,7 +60,8 @@
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/uploadbtn" />
- <EditText
+
+    <EditText
         android:id="@+id/etName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -85,7 +85,8 @@
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvName" />
-  <EditText
+
+    <EditText
         android:id="@+id/etEmail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -110,7 +111,8 @@
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvEmail" />
-  <EditText
+
+    <EditText
         android:id="@+id/etPhone"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -146,7 +148,8 @@
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvDOB" />
-   <RadioGroup
+
+    <RadioGroup
         android:id="@+id/radioGrp"
         android:layout_width="210dp"
         android:layout_height="24dp"
@@ -172,7 +175,9 @@
             android:textColor="@color/black"
             android:textSize="14sp" />
     </RadioGroup>
-   <TextView
+
+
+    <TextView
         android:id="@+id/tvLevel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -191,7 +196,9 @@
         android:entries="@array/spinner_values"
         app:layout_constraintStart_toEndOf="@+id/tvLevel"
         app:layout_constraintTop_toBottomOf="@+id/radioGrp" />
-   <TextView
+
+
+    <TextView
         android:id="@+id/tvInterest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -214,6 +221,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/tvInterest"
         app:layout_constraintTop_toBottomOf="@+id/spinner" />
+
     <CheckBox
         android:id="@+id/FED"
         android:layout_width="270dp"
@@ -238,7 +246,8 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/tvInterest"
         app:layout_constraintTop_toBottomOf="@+id/FED" />
-  <CheckBox
+
+    <CheckBox
         android:id="@+id/AI"
         android:layout_width="270dp"
         android:layout_height="27dp"
@@ -255,16 +264,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:onClick="onRegisterClicked"
         android:text="@string/registerBtn"
         android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.445"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/AI" />
- <Button
+        app:layout_constraintTop_toBottomOf="@+id/AI"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
         android:id="@+id/datePickerButton"
         style="?android:spinnerStyle"
-        android:layout_width="150dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:text="Select Date"
@@ -275,5 +288,8 @@
         app:layout_constraintHorizontal_bias="0.102"
         app:layout_constraintStart_toEndOf="@+id/tvDOB"
         app:layout_constraintTop_toBottomOf="@+id/etPhone" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+
 </ScrollView>
