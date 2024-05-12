@@ -53,6 +53,12 @@ public class MainActivity extends AppCompatActivity {
 
         datePickerDialog.show();
     }
+
+    public void onRegisterClicked(View v){
+        Intent intent = new Intent(this,Display.class);
+        startActivity(intent);
+    }
+    
    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
        getMenuInflater().inflate(R.menu.option_menu,menu);
