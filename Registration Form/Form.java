@@ -83,3 +83,23 @@ public void openDatePicker(){
        getMenuInflater().inflate(R.menu.option_menu,menu);
         return true;
     }
+@Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == R.id.exit) {
+            showExitDialog();
+            return true;
+        }
+        if (id == R.id.amh) {
+            setLocal(this,"am");
+            recreate();
+            return true;
+        }
+        if (id == R.id.eng) {
+            setLocal(this,"en");
+            recreate();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
