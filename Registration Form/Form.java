@@ -129,3 +129,19 @@ public void openDatePicker(){
         AlertDialog alert = builder.create();
         alert.show();
     }
+ public void onRadioButtonClicked(View view) {
+        RadioGroup radioGroup = (RadioGroup) findViewById(R.id.radioGrp);
+
+       // RadioButton femaleRadioButton = findViewById(R.id.femaleRbtn);
+       // RadioButton maleRadioButton = findViewById(R.id.maleRbtn);
+
+        int id = radioGroup.getCheckedRadioButtonId();
+        switch(id) {
+            case R.id.maleRbtn:
+
+                break;
+            case R.id.femaleRbtn:
+
+                break;
+        }
+    }
