@@ -103,3 +103,11 @@ public void openDatePicker(){
         }
         return super.onOptionsItemSelected(item);
     }
+ private void setLocal(Activity activity, String languageCode) {
+        Locale locale = new Locale(languageCode);
+        Locale.setDefault(locale);
+        Resources resources = activity.getResources();
+        Configuration configuration = resources.getConfiguration();
+        configuration.setLocale(locale);
+        resources.updateConfiguration(configuration, resources.getDisplayMetrics());
+    }
