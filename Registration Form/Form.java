@@ -61,3 +61,20 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
             image.setImageURI(imageUri);
         }
     }
+public void openDatePicker(){
+        // current date
+        Calendar calendar = Calendar.getInstance();
+        int year = calendar.get(Calendar.YEAR);
+        int month = calendar.get(Calendar.MONTH);
+        int dayOfMonth = calendar.get(Calendar.DAY_OF_MONTH);
+
+
+        DatePickerDialog datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                dateButton.setText(String.valueOf(year) + "." + String.valueOf(month) + "." + String.valueOf(dayOfMonth));
+            }
+        }, year, month, dayOfMonth);
+
+        datePickerDialog.show();
+    }
