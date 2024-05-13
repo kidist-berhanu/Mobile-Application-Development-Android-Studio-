@@ -145,3 +145,30 @@ public void openDatePicker(){
                 break;
         }
     }
+ Spinner spinner = (Spinner) findViewById(R.id.spinner);
+    String string = String.valueOf(spinner.getSelectedItem());
+
+    public void onCheckboxClicked(View view) {
+        // Has the checkbox that was clicked been checked?
+    boolean checked = ((CheckBox) view).isChecked();
+
+    // Retrieve which checkbox was clicked
+        switch(view.getId()) {
+            case R.id.GraphicDesign:
+                if (checked) {}
+                else {}
+                break;
+            case R.id.FED:
+                if (checked) {}
+                else {}
+                break;
+            case R.id.BED:
+                if (checked) {}
+                else {}
+                break;
+            case R.id.AI:
+                if (checked) {}
+                else {}
+                break;
+        }
+    }
