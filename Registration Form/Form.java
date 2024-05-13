@@ -172,3 +172,8 @@ public void openDatePicker(){
                 break;
         }
     }
+public void onRegisterClicked(View v){
+        Intent intent = new Intent(this,Display.class);
+        startActivity(intent);
+    }
+}
