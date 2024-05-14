@@ -1,10 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/chlang"
+        android:title="Change Language" >
+
+        <menu>
+            <item
+                android:id="@+id/amh"
+                android:title="Amharic"/>
+            <item
+                android:id="@+id/eng"
+                android:title="English"/>
+
+        </menu>
+    </item>
+
     <item
         android:id="@+id/exit"
         android:title="Exit" />
-     <item
-        android:id="@+id/chlang"
-        android:title="Change Langguage" />
+
 </menu>
