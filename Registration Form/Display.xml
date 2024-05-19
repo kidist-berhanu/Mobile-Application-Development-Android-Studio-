@@ -116,3 +116,21 @@
         android:text="@string/gender"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvdobD" />
+ <TextView
+        android:id="@+id/GenderD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/gender"
+        app:layout_constraintStart_toEndOf="@+id/tvgenderD"
+        app:layout_constraintTop_toBottomOf="@+id/DOBD" />
+
+    <TextView
+        android:id="@+id/tvlevelD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/level"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvgenderD" />
