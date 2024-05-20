@@ -1,1 +1,31 @@
-
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">የምዝገባ ቅጽ</string>
+    <string name="welcome">እንኳን በደህና መጡ እባክዎን ለኢንተርንሽፕዎ ማመልከት የሚፈልጉበት ኩባንያ ይምረጡ</string>
+    <string name="title">የተለማማጅ ፕሮግራም አመልካቾች ቅጽ</string>
+    <string name="uploadBtn">ምስል አስገባ</string>
+    <string name="fname">ሙሉ ስም</string>
+    <string name="email">ኢሜይል</string>
+    <string name="phone">ስልክ</string>
+    <string name="dob">የተወለደበት ቀን</string>
+    <string name="gender">ጾታ</string>
+    <string name="female">ሴት</string>
+    <string name="male">ወንድ</string>
+    <string name="level">የትምህርት ደረጃ</string>
+    <string name="interest">ፍላጎት</string>
+    <string name="registerBtn">ይመዝገቡ</string>
+    <string name="submit">አስገባ</string>
+    <string-array name="spinner_values">
+        <item>ሁለተኛ ደረጃ ትምህርት ቤት</item>
+        <item>ቅድመ ምረቃ</item>
+        <item>ቢኤ/ቢኤስሲ ዲግሪ</item>
+        <item>MA/Msc ዲግሪ</item>
+        <item>ፒኤችዲ</item>
+    </string-array>
+    <string-array name="company_list">
+        <item>ኩባንያ 1</item>
+        <item>ኩባንያ 2</item>
+        <item>ኩባንያ 3</item>
+        <item>ኩባንያ 4</item>
+    </string-array>
+</resources>
