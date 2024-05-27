@@ -29,31 +29,31 @@ import java.util.Calendar;
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
-    private String name;
-    private String email;
-    private String phone;
-    private String dob;
-    private String gender;
-    private String educationLevel;
-    private Uri imageUri;
-    private static final int imageRequestCode = 1;
+    private String name; // User's name
+    private String email; // User's email
+    private String phone; // User's phone number
+    private String dob; // User's date of birth
+    private String gender; // User's gender
+    private String educationLevel; // User's education level
+    private Uri imageUri; // URI for user's selected image
+    private static final int imageRequestCode = 1; // Request code for image picker
 
-    public ImageView image;
-    public EditText Name;
-    public EditText Email;
-    public EditText Phone;
-    public Spinner spinner;
-    public String selectedGender;
-    public Button imgButton;
-    public Button dateButton;
-    private ActivityMainBinding binding;
+    public ImageView image; // ImageView for displaying selected image
+    public EditText Name; // EditText for user's name input
+    public EditText Email; // EditText for user's email input
+    public EditText Phone; // EditText for user's phone input
+    public Spinner spinner; // Spinner for selecting education level
+    public String selectedGender; // Selected gender value
+    public Button imgButton; // Button for opening image picker
+    public Button dateButton; // Button for opening date picker
+    private ActivityMainBinding binding; // View binding instance
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
-        View view = binding.getRoot();
-        setContentView(view);
+        binding = ActivityMainBinding.inflate(getLayoutInflater()); // Inflate the layout using view binding
+        View view = binding.getRoot(); // Get the root view from binding
+        setContentView(view); // Set the content view to the root view
 
         // Retrieve and apply language preference
         String selectedLanguage = getLanguagePreference();
@@ -75,9 +75,9 @@ public class MainActivity extends AppCompatActivity {
         // Initialize views
         image = binding.ivImage;
         imgButton = binding.uploadbtn;
-        imgButton.setOnClickListener(v -> openImagePicker());
+        imgButton.setOnClickListener(v -> openImagePicker()); // Set click listener to open image picker
         dateButton = binding.datePickerButton;
-        dateButton.setOnClickListener(v -> openDatePicker());
+        dateButton.setOnClickListener(v -> openDatePicker()); // Set click listener to open date picker
 
         Name = binding.etName;
         Email = binding.etEmail;
@@ -89,6 +89,7 @@ public class MainActivity extends AppCompatActivity {
             image.setImageURI(imageUri);
         }
 
+        // Set click listener for register button
         binding.registerBtn.setOnClickListener(v -> onRegisterClicked());
     }
 
@@ -122,6 +123,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    // Method to open image picker
     public void openImagePicker() {
         Intent intent = new Intent();
         intent.setType("image/*");
@@ -138,6 +140,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    // Method to open date picker dialog
     public void openDatePicker() {
         Calendar calendar = Calendar.getInstance();
         int year = calendar.get(Calendar.YEAR);
@@ -154,60 +157,68 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.option_menu, menu);
+        getMenuInflater().inflate(R.menu.option_menu, menu); // Inflate the options menu from XML
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
+        int id = item.getItemId(); // Get the ID of the selected menu item
+
+        // Handle menu item selections
         if (id == R.id.exit) {
-            showExitDialog();
+            showExitDialog(); // Show exit confirmation dialog
             return true;
         }
         if (id == R.id.amh) {
-            setLocale(this, "am");
-            recreate();
+            setLocale(this, "am"); // Change language to Amharic
+            recreate(); // Recreate the activity to apply changes
             return true;
         }
         if (id == R.id.eng) {
-            setLocale(this, "en");
-            recreate();
+            setLocale(this, "en"); // Change language to English
+            recreate(); // Recreate the activity to apply changes
             return true;
         }
-        return super.onOptionsItemSelected(item);
+        return super.onOptionsItemSelected(item); // Call the superclass implementation for other items
     }
 
+    // Method to set the locale of the application
     private void setLocale(Activity activity, String languageCode) {
-        Locale locale = new Locale(languageCode);
-        Locale.setDefault(locale);
-        Resources resources = activity.getResources();
-        Configuration configuration = resources.getConfiguration();
-        configuration.setLocale(locale);
-        resources.updateConfiguration(configuration, resources.getDisplayMetrics());
-        saveLanguagePreference(languageCode);
+        Locale locale = new Locale(languageCode); // Create a new locale with the given language code
+        Locale.setDefault(locale); // Set it as the default locale
+        Resources resources = activity.getResources(); // Get the resources of the activity
+        Configuration configuration = resources.getConfiguration(); // Get the current configuration
+        configuration.setLocale(locale); // Set the locale of the configuration
+        resources.updateConfiguration(configuration, resources.getDisplayMetrics()); // Update the configuration with the new locale
+        saveLanguagePreference(languageCode); // Save language preference to shared preferences
     }
 
+    // Method to save language preference
     private void saveLanguagePreference(String languageCode) {
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
         preferences.edit().putString("language", languageCode).apply();
     }
 
+    // Method to get saved language preference
     private String getLanguagePreference() {
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
-        return preferences.getString("language", "en");
+        return preferences.getString("language", "en"); // Default to English if no preference is saved
     }
 
+    // Method to show exit confirmation dialog
     private void showExitDialog() {
         new AlertDialog.Builder(this)
-                .setMessage("Are you sure you want to exit?")
-                .setTitle("Exit")
-                .setCancelable(false)
-                .setPositiveButton("Yes", (dialog, id) -> finish())
-                .setNegativeButton("No", (dialog, id) -> dialog.cancel())
+                .setMessage("Are you sure you want to exit?") // Set the message
+                .setTitle("Exit") // Set the title
+                .setCancelable(false) // Make the dialog not cancellable
+                .setPositiveButton("Yes", (dialog, id) -> finish()) // Set positive button to finish the activity
+                .setNegativeButton("No", (dialog, id) -> dialog.cancel()) // Set negative button to cancel the dialog
                 .create()
                 .show();
     }
+
+    // Method to handle gender radio button selection
     public void onRadioButtonClicked(View view) {
         RadioGroup radioGroup = (RadioGroup) binding.radioGrp;
         int id = radioGroup.getCheckedRadioButtonId();
@@ -221,22 +232,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    // Method to handle register button click
     public void onRegisterClicked() {
-
-        if (imageUri == null) {
-            Toast.makeText(this, "Please select an image", Toast.LENGTH_SHORT).show();
-            return;
-        }
-
-        Intent intent = new Intent(this, Display.class);
-        intent.putExtra("IMAGE_URI", imageUri.toString());
-        intent.putExtra("FULL_NAME", Name.getText().toString());
-        intent.putExtra("EMAIL", Email.getText().toString());
-        intent.putExtra("PHONE", Phone.getText().toString());
-        intent.putExtra("DOB", dob);
-        intent.putExtra("GENDER", selectedGender);
-        intent.putExtra("EDUCATION_LEVEL", spinner.getSelectedItem().toString());
-
-        startActivity(intent);
-    }
-}
+        if (
