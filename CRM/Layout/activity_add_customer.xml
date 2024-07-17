@@ -1,1 +1,338 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg5"
+        tools:context=".MainActivity"
+        tools:layout_editor_absoluteX="41dp"
+        tools:layout_editor_absoluteY="269dp">
+
+        <TextView
+            android:id="@+id/phoneNumTxt"
+            android:layout_width="151dp"
+            android:layout_height="21dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/phone_number"
+            android:textColor="#000000"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/FnameEditTxt" />
+
+        <TextView
+            android:id="@+id/FnameTxt"
+            android:layout_width="103dp"
+            android:layout_height="23dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/full_name"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/customerRegTxt" />
+
+        <TextView
+            android:id="@+id/customerRegTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="@string/customer_registration"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/emailTxt"
+            android:layout_width="151dp"
+            android:layout_height="21dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/email"
+            android:textColor="#000000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextPhone" />
+
+        <EditText
+            android:id="@+id/FnameEditTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:ems="10"
+            android:inputType="text"
+            android:textColor="#000000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/FnameTxt" />
+
+        <EditText
+            android:id="@+id/editTextPhone"
+            android:layout_width="207dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="16dp"
+            android:ems="10"
+            android:inputType="phone"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/phoneNumTxt" />
+
+        <EditText
+            android:id="@+id/editTextTextEmailAddress"
+            android:layout_width="257dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="16dp"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:textColor="#000000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emailTxt" />
+
+        <ImageView
+            android:id="@+id/chooseImgView"
+            android:layout_width="153dp"
+            android:layout_height="118dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/placeholder"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/FnameEditTxt"
+            app:layout_constraintTop_toBottomOf="@+id/customerRegTxt" />
+
+        <Button
+            android:id="@+id/chooseImgBtn"
+            android:layout_width="95dp"
+            android:layout_height="27dp"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="45dp"
+            android:background="#840005"
+            android:onClick="chooseImg"
+            android:padding="1dp"
+            android:text="@string/choose_image"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textColorLink="#E5B665"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:iconSize="14dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/editTextPhone"
+            app:layout_constraintTop_toBottomOf="@+id/chooseImgView" />
+
+        <EditText
+            android:id="@+id/datePicker"
+            android:layout_width="116dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="16dp"
+            android:ems="10"
+            android:inputType="date"
+            android:onClick="openDatePicker"
+            android:text="@string/select_date"
+            android:textColor="#000000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/DOBTxt" />
+
+        <CalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="225dp"
+            android:layout_height="340dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@+id/datePicker"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
+
+        <TextView
+            android:id="@+id/DOBTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/date_of_birth"
+            android:textColor="#000000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
+
+        <TextView
+            android:id="@+id/genderTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/gender"
+            android:textColor="#000000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/datePicker" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="162dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toEndOf="@+id/genderTxt"
+            app:layout_constraintTop_toBottomOf="@+id/datePicker">
+
+            <RadioButton
+                android:id="@+id/maleBtn"
+                android:layout_width="77dp"
+                android:layout_height="match_parent"
+                android:text="@string/male"
+                android:textColor="#000000"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/femaleBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/female"
+                android:textColor="#000000"
+                android:textSize="12sp" />
+        </RadioGroup>
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="19dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:alwaysDrawnWithCache="false"
+            android:animateLayoutChanges="true"
+            android:entries="@array/areaLists"
+            android:spinnerMode="dropdown"
+            android:textAlignment="inherit"
+            app:layout_constraintStart_toEndOf="@+id/areaTxt"
+            app:layout_constraintTop_toBottomOf="@+id/genderTxt" />
+
+        <TextView
+            android:id="@+id/areaTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/preferred_area"
+            android:textColor="#000000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/genderTxt" />
+
+        <CheckBox
+            android:id="@+id/apartment"
+            android:layout_width="119dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/apartment"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/PropertyTypeTxt"
+            app:layout_constraintTop_toBottomOf="@+id/spinner" />
+
+        <CheckBox
+            android:id="@+id/villa"
+            android:layout_width="119dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:text="@string/villa"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/PropertyTypeTxt"
+            app:layout_constraintTop_toBottomOf="@+id/apartment" />
+
+        <CheckBox
+            android:id="@+id/share"
+            android:layout_width="119dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:text="@string/share"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/PropertyTypeTxt"
+            app:layout_constraintTop_toBottomOf="@+id/villa" />
+
+        <TextView
+            android:id="@+id/PropertyTypeTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/property_type"
+            android:textColor="#000000"
+            android:textColorLink="#FFFFFF"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/areaTxt" />
+
+        <TextView
+            android:id="@+id/customerTypeTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/customer_type"
+            android:textColor="#000000"
+            android:textColorLink="#FFFFFF"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/share" />
+
+        <RadioGroup
+            android:id="@+id/customerTypeRadio"
+            android:layout_width="124dp"
+            android:layout_height="92dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toEndOf="@+id/customerTypeTxt"
+            app:layout_constraintTop_toBottomOf="@+id/share">
+
+            <RadioButton
+                android:id="@+id/classA"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="@string/class_a"
+                android:textColor="#000000"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/classB"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:text="@string/class_b"
+                android:textColor="#000000"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/classC"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="@string/class_c"
+                android:textColor="#000000"
+                android:textSize="12sp" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/addCustomerBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="#840005"
+            android:text="@string/add"
+            android:textColor="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/customerTypeRadio" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
 
